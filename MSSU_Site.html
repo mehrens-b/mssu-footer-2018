@@ -528,7 +528,6 @@
     </style>
     <style>
         /*Footer Overrides*/
-        /*List Padding*/
         
         .padding-left {
             padding-left: 1em;
@@ -536,6 +535,17 @@
         
         #footer_primary_links li {
             text-align: left;
+            display: block;
+        }
+        
+        #footer_secondary_links {
+            text-align: right;
+            right: 1em;
+        }
+        
+        #footer_secondary_links li {
+            display: inline-block;
+            padding-left: 1em;
         }
     </style>
 </head>
@@ -549,7 +559,7 @@
             <ul class="padding-left">
                 <li><a href="#">Library</a></li>
                 <li><a href="#">Bookstore</a></li>
-                <li><a href="#">News &amp Events</a></li>
+                <li><a href="#">Events</a></li>
                 <li><a href="#">Testimonials</a></li>
                 <li><a href="#">Campus Security</a></li>
                 <li><a href="#">Accessibility Statement</a></li>
@@ -558,17 +568,16 @@
             </ul>
         </div>
         <div class="pure-u-1 pure-u-md-2-5">
-            <div class="pure-u-1">
-                <div class="pure-menu pure-menu-horizontal"> <a href="#" class="pure-menu-heading pure-menu-link">BRAND</a>
-                    <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">News</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sports</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Finance</a></li>
-                    </ul>
-                </div>
+            <div class="pure-u-1" id="footer_secondary_links">
+                <ul class="">
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Directions</a></li>
+                    <li><a href="#">Map</a></li>
+                    <li><a href="#">Employment</a></li>
+                </ul>
             </div>
-            <div class="pure-u-1 pure-u-md-1-5">
-                <div class="footer-link-container">
+            <!--<div class="pure-u-1 pure-u-md-1-5">
+                <div class="sfooter-link-container">
                     <ul>
                         <li>
                             <a href="https://www.google.com/maps/place/Missouri+Southern+State+University/" target="_blank"> <address>3950 E. Newman Road - Joplin, MO 64801</address> </a>
@@ -581,8 +590,7 @@
                             </script> Missouri Southern State University</li>
                     </ul>
                 </div>
-            </div>
-        </div>
+            </div>--></div>
     </footer>
 </body>
 
