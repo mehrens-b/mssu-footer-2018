@@ -1,0 +1,175 @@
+{
+    
+"points-of-pride": [
+
+       {
+		"point-type": "text",
+	        "point-standout": "130",
+            
+		"point-body": "Bachelor's Degree Options"
+        
+	},
+        
+	{
+            
+		"point-type": "text",
+		"point-standout": "90+",
+            
+		"point-body": "Student Organizations"
+        
+	},
+	{
+		"point-type": "text",
+		"point-standout": "1 of 31",
+
+		"point-body": "Nationally Accredited Environmental Health Programs"
+
+	},
+	{
+		"point-type": "text",
+		"point-standout": "1 of 10",
+
+		"point-body": "Nationally Accredited Industrial Engineering Technology Bachelor Programs"
+
+	},
+	{
+            "point-type": "badge",
+            "point-image-url": "/images/most-affordable-online-colleges-2017.png"
+        },
+	{
+            "point-type": "badge",
+            "point-image-url": "/images/risk-reward-indicator.png"
+        },
+	{
+            "point-type": "badge",
+            "point-image-url": "/images/badges/USnews.png"
+        },
+		{
+	    "point-type": "badge",
+            "point-image-url": "/images/MFS17_Designation.png"
+	},
+	{
+		"point-type": "text",
+		"point-standout": "45",
+            
+		"point-body": "All MIAA Athletes"
+        
+	},
+        
+	{
+            
+		"point-type": "text",
+		"point-standout": "3.2",
+            
+		"point-body": "Average GPA for Incoming Freshman"
+
+	},
+	{
+		"point-type": "text",
+		"point-standout": "3.3",
+		"point-body": "Average GPA for Graduating Seniors"
+	},
+	{
+
+		"point-type": "text",
+		"point-standout": "140+",
+            
+		"point-body": "Programs of Study"
+        
+	},      
+	{
+            
+		"point-type": "text",
+		"point-standout": "18:1",
+            
+		"point-body": "Student/Faculty Ratio"
+
+	},
+	{
+
+		"point-type": "text",
+		"point-standout": "18",
+            
+		"point-body": "Average Class Size"
+        
+	},
+        
+	{
+            
+		"point-type": "text",
+		"point-standout": "92%",
+            
+		"point-body": "Job Placement Rate"
+        
+	},
+        
+	{
+            
+		"point-type": "text",
+		"point-standout": "11",
+            
+		"point-body": "Partnerships with Universities Around the Globe"
+        
+	},
+        
+	{
+            
+		"point-type": "text",
+		"point-standout": "100%",
+            
+		"point-body": "Pass Rate for Nursing & Teaching Certification Exams"
+        
+	},
+        
+	{
+            
+		"point-type": "text",
+		"point-standout": "$4.4",
+            
+		"point-body": "Million Dollars in Scholarships Awarded Annually"
+        
+	},
+
+	{
+            "point-type": "badge",
+            "point-image-url": "/images/badges/ROI.png"
+        }, 
+	{
+            "point-type": "badge",
+            "point-image-url": "/images/badges/TeacherEd.png"
+        },       
+	{
+            "point-type": "badge",
+            "point-image-url": "/images/badges/college-ranking1.png"
+        },
+		{
+            "point-type": "badge",
+            "point-image-url": "/images/bachelors-human-resources.png"
+        },
+		{
+            "point-type": "badge",
+            "point-image-url": "/images/Best-Online-Colleges-in-Missouri-1-300x265.png"
+        },
+	{
+            
+		"point-type": "text",
+		"point-standout": "Top 10",
+            
+		"point-body": "Least Expensive Public Colleges for Out-of-State Tuition"
+        
+	},
+	{
+	   		 "point-type": "badge",
+             "point-image-url": "/_resources/images/Most-Affordable-Nursing-Schools-in-Missouri.png"
+		},
+			{
+	   		 "point-type": "badge",
+             "point-image-url": "/_resources/images/missouri.png"
+		},
+			{
+	   		 "point-type": "badge",
+             "point-image-url": "/_resources/images/Criminal%20Justice.png"
+		}
+		
+]
+}
