@@ -529,8 +529,16 @@
     <style>
         /*Footer Overrides*/
         
+        .moso-yellow {
+            color: gold;
+        }
+        
         .padding-left {
             padding-left: 1em;
+        }
+        
+        #footer_primary_links {
+            display: inline-block;
         }
         
         #footer_primary_links li {
@@ -539,42 +547,103 @@
         }
         
         #footer_secondary_links {
-            text-align: right;
-            right: 1em;
+            /*text-align: right;*/
+        }
+        
+        #footer_secondary_links ul {
+            text-align: center;
+            border-bottom: 2px solid rgb(0, 0, 0, .2);
         }
         
         #footer_secondary_links li {
+            width: auto;
             display: inline-block;
+        }
+        
+        #footer_cta_nav li {
+            display: block;
+        }
+        
+        #footer_cta_nav a {
+            color: gold;
+        }
+        
+        #footer_social {
+            text-align: right;
+        }
+        
+        #footer_social .fa-stack .fa-circle {
+            color: white;
+        }
+        
+        #footer_social i {
+            color: black;
+        }
+        
+        #footer_contact_info {
+            text-align: right;
+        }
+        
+        @media screen and (max-width: 768px) {
+            footer #footer_logo {
+                display: block;
+                width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                height: auto !important;
+                vertical-align: middle;
+            }
+            #footer_primary_links {
+                display: block;
+            }
         }
     </style>
 </head>
 
 <body>
     <footer class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-5">
-            <a href="/"> <img id="footer-logo" src="./images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png" alt="Missouri Southern State University logo" style="max-width: 200px" class="pure-img" /> </a>
+        <div class="pure-u-1 pure-u-md-2-3">
+            <a href="/"> <img id="footer-logo" src="./images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png" alt="Missouri Southern State University logo" style="width: 200px" class="pure-imgs" /> </a>
+            <div class="" id="footer_primary_links">
+                <ul class="padding-left">
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Bookstore</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Campus Security</a></li>
+                    <li><a href="#">Accessibility Statement</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Crossroads Magazine</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="pure-u-1 pure-u-md-2-5" id="footer_primary_links">
-            <ul class="padding-left">
-                <li><a href="#">Library</a></li>
-                <li><a href="#">Bookstore</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Campus Security</a></li>
-                <li><a href="#">Accessibility Statement</a></li>
-                <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Crossroads Magazine</a></li>
-            </ul>
-        </div>
-        <div class="pure-u-1 pure-u-md-2-5">
+        <div class="pure-u-1 pure-u-md-1-3">
             <div class="pure-u-1" id="footer_secondary_links">
-                <ul class="">
+                <ul>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Directions</a></li>
                     <li><a href="#">Map</a></li>
                     <li><a href="#">Employment</a></li>
                 </ul>
             </div>
+            <div id="footer_cta_nav">
+                <ul class="">
+                    <li><a href="#">Request more information</a></li>
+                    <li><a href="#">Visit Campus</a></li>
+                    <li><a href="#">Apply</a></li>
+                </ul>
+            </div>
+            <div id="footer_social">
+                <a href="twitter" class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x"></i> </a>
+                <a href="facebook" class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-facebook fa-stack-1x"></i> </a>
+                <a href="instagram" class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-instagram fa-stack-1x"></i> </a>
+                <a href="youtube" class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-youtube fa-stack-1x"></i> </a>
+            </div>
+            <div id="footer_contact_info"> <address>
+                3950 E. Newman Rd. - Joplin, MO 64801<br>
+                <abbr title="Phone number">P: </abbr>866-818-6778<br>
+                <a href="mailto:info@mssu.edu">info@mssu.edu</a>
+                </address> </div>
             <!--<div class="pure-u-1 pure-u-md-1-5">
                 <div class="sfooter-link-container">
                     <ul>
