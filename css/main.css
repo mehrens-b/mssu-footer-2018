@@ -989,11 +989,13 @@ footer li {
         text-align: center;
         line-height: 2em
     }
+    /* Removed below as it was interfering with layout and not needed*/
+    /*
     footer li:nth-of-type(2),
     footer li:nth-of-type(3) {
         display: inline-block;
         width: 49%
-    }
+    }*/
 }
 
 @media screen and (min-width:769px) {
