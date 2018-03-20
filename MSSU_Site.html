@@ -529,95 +529,106 @@
     <style>
         /*Footer Overrides*/
         
-        .moso-yellow {
-            color: gold;
-        }
-        
-        .padding-left {
-            padding-left: 1em;
-        }
-        
-        #mssu_logo {
-            display: inline-block;
+        #footer-left-side {
             text-align: center;
-            height: 100%;
-            vertical-align: middle;
         }
         
-        #footer_right_side {
-            padding: 0 2em 2em 0;
+        #footer_primary_nav {
+            padding: 1em 0;
+            border-top: 1px solid rgba(0, 0, 0, .2);
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
         }
         
-        #footer_primary_links {
+        #footer_social {
+            text-align: center;
+        }
+        
+        #footer_social .fa-stack-1x {
+            color: black;
+        }
+        
+        #footer_secondary_nav {
+            text-align: center;
+        }
+        
+        #footer_secondary_nav li {
             display: inline-block;
-        }
-        
-        #footer_primary_links li {
-            text-align: left;
-            display: block;
-        }
-        
-        #footer_secondary_links {
-            text-align: right;
-        }
-        
-        #footer_secondary_links ul {
-            /*  text-align: center;*/
-            border-bottom: 2px solid rgb(0, 0, 0, .7);
-        }
-        
-        #footer_secondary_links li {
-            margin-left: 1em;
-            display: inline-block;
-        }
-        
-        #footer_cta_nav li {
-            display: block;
+            padding: 0 .5em;
         }
         
         #footer_cta_nav a {
             color: gold;
         }
         
-        #footer_social {
-            text-align: right;
+        #footer_address {
+            margin: 1em 0;
+            text-align: center;
         }
         
-        #footer_social .fa-stack .fa-circle {
-            color: white;
-        }
-        
-        #footer_social i {
-            color: black;
-        }
-        
-        #footer_contact_info {
-            text-align: right;
-        }
-        
-        @media screen and (max-width: 768px) {
-            #mssu_logo {
+        @media screen and (min-width: 768px) {
+            footer::after {
+                content: "";
                 display: block;
-                height: auto;
+                clear: both;
             }
-            #footer_primary_links {
-                width: 200px;
-                margin: 0 auto;
-                display: block;
+            #footer-left-side {
+                padding-left: 1%;
+                height: 100%;
+                display: inline-block;
+                width: 48%;
+                text-align: left;
+                vertical-align: middle;
             }
-            #footer_secondary_links {
-                text-align: center;
+            #footer-left-side div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            #footer-left-side a {
+                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            #footer_primary_nav {
+                margin-left: 1em;
+                padding: 0;
+                border: 0;
+            }
+            #footer-left-side li {
+                text-align: left;
+            }
+            #footer-right-side {
+                vertical-align: middle;
+                display: inline-block;
+                padding: 0;
+                padding-right: 1%;
+                width: 48%;
+            }
+            #footer_secondary_nav {
+                float: right;
+                width: 21em;
+                text-align: right;
+                border-bottom: 1px solid rgba(0, 0, 0, .2);
+            }
+            #footer_secondary_nav li {
+                padding: 0;
+                padding-left: 1em;
+            }
+            #footer_social {
+                text-align: right;
+            }
+            #footer_address {
+                text-align: right;
             }
         }
     </style>
 </head>
 
 <body>
-    <footer class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2" id="logo-and-primary-nav">
-            <a href="/" id="mssu_logo"> <img id="footer-logos" src="./images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png" alt="Missouri Southern State University logo" style="width: 200px" class="" /></a>
-            <div class="" id="footer_primary_links">
-                <ul class="padding-left">
+    <footer>
+        <div id="footer-left-side">
+            <a href="/"> <img src="./images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png" alt="Missouri Southern State University logo" style="width: 200px" class="" /></a>
+            <div>
+                <ul id="footer_primary_nav">
                     <li><a href="#">Library</a></li>
                     <li><a href="#">Bookstore</a></li>
                     <li><a href="#">Events</a></li>
@@ -629,17 +640,17 @@
                 </ul>
             </div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2" id="footer_right_side">
-            <div class="pure-u-1" id="footer_secondary_links">
-                <ul>
+        <div id="footer-right-side">
+            <div>
+                <ul id="footer_secondary_nav">
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Directions</a></li>
                     <li><a href="#">Map</a></li>
                     <li><a href="#">Employment</a></li>
                 </ul>
             </div>
-            <div id="footer_cta_nav">
-                <ul class="">
+            <div>
+                <ul id="footer_cta_nav">
                     <li><a href="#">Request more information</a></li>
                     <li><a href="#">Visit Campus</a></li>
                     <li><a href="#">Apply</a></li>
@@ -651,7 +662,7 @@
                 <a href="instagram" class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-instagram fa-stack-1x"></i> </a>
                 <a href="youtube" class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-youtube fa-stack-1x"></i> </a>
             </div>
-            <div id="footer_contact_info"> <address>
+            <div id="footer_address"> <address>
                 3950 E. Newman Rd. - Joplin, MO 64801<br>
                 <abbr title="Phone number">P: </abbr>866-818-6778<br>
                 <a href="mailto:info@mssu.edu">info@mssu.edu</a>
