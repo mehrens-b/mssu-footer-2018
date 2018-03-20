@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>MSSU - MSSU | Missouri Southern State University -- Updated Footer</title>
+    <title>MSSU - MSSU | Missouri Southern State University -- Updated Footer - no Pure Branch</title>
     <!--#include virtual="/_resources/includes/ie_include.inc" -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="https://www.mssu.edu/favicon.ico">
@@ -537,6 +537,17 @@
             padding-left: 1em;
         }
         
+        #mssu_logo {
+            display: inline-block;
+            text-align: center;
+            height: 100%;
+            vertical-align: middle;
+        }
+        
+        #footer_right_side {
+            padding: 0 2em 2em 0;
+        }
+        
         #footer_primary_links {
             display: inline-block;
         }
@@ -547,16 +558,16 @@
         }
         
         #footer_secondary_links {
-            /*text-align: right;*/
+            text-align: right;
         }
         
         #footer_secondary_links ul {
-            text-align: center;
-            border-bottom: 2px solid rgb(0, 0, 0, .2);
+            /*  text-align: center;*/
+            border-bottom: 2px solid rgb(0, 0, 0, .7);
         }
         
         #footer_secondary_links li {
-            width: auto;
+            margin-left: 1em;
             display: inline-block;
         }
         
@@ -585,16 +596,17 @@
         }
         
         @media screen and (max-width: 768px) {
-            footer #footer_logo {
+            #mssu_logo {
                 display: block;
-                width: 200px;
-                margin-left: auto;
-                margin-right: auto;
-                height: auto !important;
-                vertical-align: middle;
+                height: auto;
             }
             #footer_primary_links {
+                width: 200px;
+                margin: 0 auto;
                 display: block;
+            }
+            #footer_secondary_links {
+                text-align: center;
             }
         }
     </style>
@@ -602,8 +614,8 @@
 
 <body>
     <footer class="pure-g">
-        <div class="pure-u-1 pure-u-md-2-3">
-            <a href="/"> <img id="footer-logo" src="./images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png" alt="Missouri Southern State University logo" style="width: 200px" class="pure-imgs" /> </a>
+        <div class="pure-u-1 pure-u-md-1-2" id="logo-and-primary-nav">
+            <a href="/" id="mssu_logo"> <img id="footer-logos" src="./images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png" alt="Missouri Southern State University logo" style="width: 200px" class="" /></a>
             <div class="" id="footer_primary_links">
                 <ul class="padding-left">
                     <li><a href="#">Library</a></li>
@@ -617,7 +629,7 @@
                 </ul>
             </div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pure-u-1 pure-u-md-1-2" id="footer_right_side">
             <div class="pure-u-1" id="footer_secondary_links">
                 <ul>
                     <li><a href="#">Contact us</a></li>
@@ -644,21 +656,7 @@
                 <abbr title="Phone number">P: </abbr>866-818-6778<br>
                 <a href="mailto:info@mssu.edu">info@mssu.edu</a>
                 </address> </div>
-            <!--<div class="pure-u-1 pure-u-md-1-5">
-                <div class="sfooter-link-container">
-                    <ul>
-                        <li>
-                            <a href="https://www.google.com/maps/place/Missouri+Southern+State+University/" target="_blank"> <address>3950 E. Newman Road - Joplin, MO 64801</address> </a>
-                        </li>
-                        <li> <a href="tel:+18668186778">866-818-6778</a> </li>
-                        <li> <a href="mailto:info@mssu.edu">info@mssu.edu</a> </li>
-                        <li><span id="newdel">&copy;</span>
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> Missouri Southern State University</li>
-                    </ul>
-                </div>
-            </div>--></div>
+        </div>
     </footer>
 </body>
 
