@@ -529,6 +529,19 @@
     <style>
         /*  Header Overrides */
         
+        header .nav,
+        .menu {
+            color: black;
+        }
+        
+        #toggle {
+            display: none;
+        }
+        
+        #toggle:checked + .menu {
+            display: none;
+        }
+        
         header {
             background: #fff;
         }
@@ -574,8 +587,18 @@
         }
         
         header .header_main_nav div {
+            position: relative;
             display: inline-block;
             padding: 0 1em;
+        }
+        /* Main Nav popover stuff */
+        
+        .main_nav_popover {
+            display: none;
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
         }
         
         @media screen and (max-width: 756px) {
@@ -610,7 +633,16 @@
             <a href="mssu.edu"><img src="images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png"></a>
         </div>
         <nav aria-label="Main Navigation" class="header_main_nav">
-            <div><a href="/academics">Academics</a></div>
+            <div class="main_nav_element">
+                <div class="main_nav_popover">
+                    <h2>Academics</h2>
+                    <ul>
+                        <li>Honors</li>
+                        <li>Scholarships</li>
+                        <li>Research</li>
+                    </ul>
+                </div>
+                <h2>Academics</h2> </div>
             <div><a href="/admissoins">Admissions &amp; Aid</a></div>
             <div><a href="/life">Life at MOSO</a></div>
             <div><a href="/athletics">Athletics</a></div>
