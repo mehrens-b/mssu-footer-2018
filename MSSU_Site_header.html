@@ -528,22 +528,18 @@
     </style>
     <style>
         /*****  Header Overrides ******/
+        /* Generic Nav Style */
         
-        nav {
-            background: white;
-            margin: 0;
-            padding: 0;
-        }
+        nav {}
         
         nav a {
-            color: black
+            color: black;
         }
         
         nav ul {
             padding: 0;
             margin: 0;
         }
-        /* Generic Nav Style */
         
         .nav-inline > li {
             display: inline-block;
@@ -551,7 +547,6 @@
         
         .nav-inline li a {
             padding: 1em 1em;
-            //text-decoration: none;
             display: inline-block;
         }
         
@@ -564,11 +559,30 @@
             content: "|";
         }
         /* END Generic Nav Style */
+        
+        #top-navbar {
+            height: 3.5em;
+            position: relative;
+            background: white;
+        }
+        /* Audience Navigation */
+        
+        #nav_audience {
+            position: absolute;
+        }
         /*  Persistent Navbar Area */
         
         nav#persistent {
-            padding-right: 2em;
-            float: right;
+            /*padding-right: 2em;
+            float: right;*/
+            position: absolute;
+            right: 0;
+        }
+        
+        nav#persistent::after {
+            content: "";
+            display: block;
+            clear: both;
         }
         
         nav#persistent .nav-inline li {
@@ -595,13 +609,14 @@
             z-index: 1;
             background-color: #f9f9f9;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
             padding: 12px 16px;
+            border-radius: 3px;
         }
         
         .dropdown-box > h2 {
             text-align: center;
-            font-size: 1.3em;
+            font-size: 1.1em;
             border-bottom: 1px solid black;
         }
         
@@ -611,18 +626,66 @@
             margin: 0;
         }
         
-        .dropdown-box a {}
+        .dropdown-box a {
+            font-size: .9em;
+        }
+        
+        .dropdown-box a:hover {
+            text-decoration: none;
+            color: #777;
+        }
         
         .dropdown-box a:hover {}
         /* END Persistent Navbar Area */
+        /*Mobile Menu */
+        
+        #mobile_nav {
+            box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+            background: white;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 0 2em 0 1em;
+        }
+        
+        #mobile_nav h4 {
+            padding-top: 1em;
+            border-top: 3px double black;
+            font-size: .7em;
+            text-transform: uppercase;
+        }
+        
+        #mobile_nav > nav > ul {
+            max-width: 200px;
+        }
+        
+        #mobile_nav > nav > ul > li {
+            line-height: 3em;
+            padding-left: 2em;
+        }
+        
+        #mobile_nav > nav > ul > li:not(:last-child) {
+            border-bottom: 1px solid black;
+        }
+        
+        #mobile_nav {
+            display: block;
+            transition: 1s all;
+            overflow: hidden;
+        }
+        /* END Mobile Menu */
         /* Media Queries For mobile */
         
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 760px) {
+            nav#nav_audience,
             nav#persistent ul {
                 display: none;
             }
             nav#persistent .mobile-hamburger {
                 display: block;
+            }
+            #mobile_nav:target {
+                right: 0px;
             }
         }
         /**** END Header Overrides ******/
@@ -630,30 +693,36 @@
 </head>
 
 <body>
-    <header>
-        <!--
-        <nav aria-label="Gateway Navigation"></nav>
--->
-        <nav aria-label="Persistent Navigation" id="persistent">
-            <button class="mobile-hamburger" aria-label="Mobile Menu Toggle">&#x2630;</button>
-            <ul class="nav-inline pipe-divider">
-                <li class="has-dropdown-box"> <a href="/news">News</a>
-                    <div class="dropdown-box">
-                        <h2>News &amp; Events</h2>
-                        <ul>
-                            <li><a href="/crossroads">Crossroads</a></li>
-                            <li><a href="/moso-minute">Moso Minute</a></li>
-                            <li><a href="/media">For Media</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="/calendar">Calendar</a></li>
-                <li><a href="/map">Map</a></li>
-                <li><a href="/give">Giving</a></li>
-                <li><a href="/search">Search</a></li>
-            </ul>
-        </nav>
-        <div id="header_logo">
+    <header class="pure-g">
+        <div class="pure-u-1" id="top-navbar">
+            <nav aria-label="Audience Navigation" id="nav_audience">
+                <ul class="nav-inline pipe-divider">
+                    <li><a href="/students">Students</a></li>
+                    <li><a href="/parents">Parents</a></li>
+                    <li><a href="/alumni">Alumni</a></li>
+                    <li><a href="/faculty">Faculty</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Persistent Navigation" id="persistent" class="pure-u"> <a href="#mobile_nav" class="mobile-hamburger" aria-label="Mobile Menu Toggle">&#x2630;</a>
+                <ul class="nav-inline pipe-divider">
+                    <li class="has-dropdown-box"> <a href="/news">News</a>
+                        <div class="dropdown-box">
+                            <h2>News &amp; Events</h2>
+                            <ul>
+                                <li><a href="/crossroads">Crossroads</a></li>
+                                <li><a href="/moso-minute">Moso Minute</a></li>
+                                <li><a href="/media">For Media</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/calendar">Calendar</a></li>
+                    <li><a href="/map">Map</a></li>
+                    <li><a href="/give">Giving</a></li>
+                    <li><a href="/search">Search</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="header_logo" clas="pure-u-1">
             <a href="mssu.edu"><img src="images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png"></a>
         </div>
         <!--
@@ -675,6 +744,29 @@
         </nav>
 -->
     </header>
+    <div id="mobile_nav">
+        <div><a href="#">&times;</a></div>
+        <nav aria-labelledby="mobile_nav_main">
+            <h4 id="mobile_nav_main" aria-label="Mobile Main Navigation" class="mobile_nav_header">Navigation</h4>
+            <ul>
+                <li><a>About MSSU</a></li>
+                <li><a>Academics</a></li>
+                <li><a>Admissions &amp; Aid</a></li>
+                <li><a>Student Life</a></li>
+                <li><a>Athletics</a></li>
+            </ul>
+        </nav>
+        <nav aria-labelledby="mobile_nav_audiences">
+            <h4 id="mobile_nav_audiences" aria-label="Mobile Audience Navigation" class="mobile_nav_header">Audiences
+            </h4>
+            <ul>
+                <li><a>Students</a></li>
+                <li><a>Faculty &amp; Staff</a></li>
+                <li><a>Parents</a></li>
+                <li><a>Alumni</a></li>
+            </ul>
+        </nav>
+    </div>
 </body>
 
 </html>
