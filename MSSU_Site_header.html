@@ -129,17 +129,73 @@
         .padding-medium {}
         
         .crop-image-wide {
+            max-height: 500px;
+            overflow: hidden;
+            /*
             width: 300px;
             margin: 0 auto;
             overflow: hidden;
             position: relative;
             height: 200px;
+*/
         }
         
         .crop-image-wide img {
-            left: 50%;
-            margin-left: -200px;
+            /*
+            left: 50%; margin-left: -200px; position: absolute;
+*/
+        }
+        
+        #nav_desktop:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        /* TODO figure out car flip or better animation.  For now just hide and show */
+        
+        .card-flip p {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .card-flip > div:first-child {
+            position: relative;
+            display: block;
+        }
+        
+        .card-flip > div:last-child {
+            display: none;
             position: absolute;
+            top: 0;
+            left: auto;
+        }
+        
+        .card-flip:hover > div:first-child {
+            visibility: hidden;
+        }
+        
+        .card-flip:hover > div:last-child {
+            display: block;
+        }
+        /* Media Queries Tablet */
+        
+        @media screen and (max-width: 800px) {
+            #nav_audience {
+                position: absolute;
+                top: 4em;
+                right: 0;
+            }
+            #nav_audience li,
+            #nav_audience a {
+                color: white;
+            }
+            #nav_main {}
+            #mssu_header_logo {
+                width: 250px;
+            }
+            .card-flip {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -147,14 +203,14 @@
 <body>
     <header>
         <div class="container uppercase text-small">
-            <nav aria-label="Audience Navigation" id="nav_audience" class="pure-menu pure-menu-horizontal">
-                <ul class="pure-menu-list pipe-separator">
+            <nav aria-label="Audience Navigation" id="nav_desktop" class="pure-menu pure-menu-horizontal">
+                <ul class="pure-menu-list pipe-separator" id="nav_audience">
                     <li class="pure-menu-item"><a href="/students" class="pure-menu-link">Students</a></li>
                     <li class="pure-menu-item"><a href="/parents" class="pure-menu-link">Parents</a></li>
                     <li class="pure-menu-item"><a href="/alumni" class="pure-menu-link">Alumni</a></li>
                     <li class="pure-menu-item"><a href="/faculty" class="pure-menu-link">Faculty</a></li>
                 </ul>
-                <ul class="pure-menu-list float-right pipe-separator">
+                <ul class="pure-menu-list float-right pipe-separator" id="nav_main">
                     <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"> <a href="#" class="pure-menu-link">News</a>
                         <ul class="pure-menu-children box-shadow"> <span class="pure-menu-heading">News &amp; Events</span>
                             <hr class="hr-mid-width">
@@ -172,7 +228,7 @@
         </div>
         <div class="bg-green">
             <div class="container padding-small">
-                <a href="mssu.edu"><img src="images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png"></a>
+                <a href="mssu.edu"><img id="mssu_header_logo" src="images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png"></a>
             </div>
         </div>
         <nav aria-label="Main Navigation" class="pure-menu pure-menu-horizontal container center-text">
@@ -186,28 +242,36 @@
         </nav>
     </header>
     <!-- Masthead Image -->
-    <div class="container crop-image-wide"> <img src="//c1.staticflickr.com/5/4455/37376736480_eee9ce0465_k.jpg" class=""> </div>
+    <div class="crop-image-wide"> <img src="/images/masthead-960.jpg" width="100%" class="pure-img"> </div>
+    <!-- END Masthead Image
     <!-- Mission Section -->
     <div class="bg-dark-grey center-text">
         <ul class="clean-list pure-g container">
-            <li class="pure-u-1-4">
-                <h2 class="text-yellow">Mission</h2>
-                <p class="text-white">Loiem ipmson</p>
+            <li class="pure-u-1 pure-u-md-1-4 card-flip">
+                <div>
+                    <h2 class="text-yellow">Mission</h2>
+                    <p class="text-white">Loiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmson</p>
+                </div>
+                <div>
+                    <h2 class="text-yellow">Mission Info</h2>
+                    <p class="text-white">Loiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ip</p>
+                </div>
             </li>
-            <li class="pure-u-1-4">
+            <li class="pure-u-1 pure-u-md-1-4 mission-flip">
                 <h2 class="text-yellow">Mission</h2>
-                <p class="text-white">Loiem ipmson</p>
+                <p class="text-white">Loiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmson</p>
             </li>
-            <li class="pure-u-1-4">
+            <li class="pure-u-1 pure-u-md-1-4">
                 <h2 class="text-yellow">Mission</h2>
-                <p class="text-white">Loiem ipmson</p>
+                <p class="text-white">Loiem ipmson Loiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmsonLoiem ipmson</p>
             </li>
-            <li class="pure-u-1-4">
+            <li class="pure-u-1 pure-u-md-1-4">
                 <h2 class="text-yellow">Mission</h2>
-                <p class="text-white">Loiem ipmson</p>
+                <p class="text-white">Loiem ipmsonLoiem ipmsonLoiem ipmson Loiem ipmson Loiem ipmson Loiem ipmson Loiem ipmsonLoiem ipmson Loiem ipmson</p>
             </li>
         </ul>
     </div>
+    <!-- END Mission Section -->
     <!--<div id="mobile_nav">
     <div><a href="#">&times;</a></div>
     <nav aria-labelledby="mobile_nav_main">
